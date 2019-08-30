@@ -19,8 +19,11 @@ class Student:
         self.age = age
         self.cohort_number = cohort_number
         # self.full_name = (f"{first_name} {last_name}")
-  def output (self):
-      print(f"{self.first_name} {self.last_name} is {self.age} years old and is in cohort {self.cohort_number}")
+#   def output (self):
+#       print(f"{self.first_name} {self.last_name} is {self.age} years old and is in cohort {self.cohort_number}")
+
+  def __str__(self):
+        return f"{self.full_name}"
 
   @property
   def first_name(self):
@@ -100,4 +103,5 @@ class Student:
 
 Matthew = Student("Matthew","McDevitt", 22, 33)
 
-Matthew.output()
+# Matthew.output()
+print(Matthew)
